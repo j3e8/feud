@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app" ng-controller="mainController">
+  <head>
+    <title>Family Feud</title>
+    <meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+    <script type="text/javascript" src="feud.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Oswald:200,300,400,500,600,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="flexgrid.css" />
+    <link rel="stylesheet" type="text/css" href="feud.css" />
+  </head>
+  <body>
+    <main>
+      <h1><input type="text" ng-model="title"></h1>
+      <div class="floating">
+        <div class="box">
+          <div ng-repeat="answer in answers track by $index" class="answer-box">
+            <div class="flex-row vertical-center" ng-show="answer.displayed">
+              <div class="flex-cell answer">
+                <input type="text" ng-model="answer.value">
+              </div>
+              <div class="flex-cell points">
+                <input type="text" ng-model="answer.points">
+              </div>
+              <div class="flex-cell fixed icon">
+                <i class="material-icons" ng-click="toggleAnswer(answer)">cached</i>
+              </div>
+            </div>
+            <div class="back" ng-show="!answer.displayed" ng-click="toggleAnswer(answer)">
+              <div class="number">
+                {{ $index + 1 }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="strikes">
+        <img src="strike.png" class="strike" ng-repeat="s in getStrikesArray() track by $index">
+      </div>
+
+      <div class="text-right">
+        <button ng-click="reset()">Reset</button>
+        <button ng-click="addAnswer()">Add</button>
+        <button ng-click="addStrike()">Strike</button>
+      </div>
+
+    </main>
+  </body>
+</html>

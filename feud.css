@@ -1,0 +1,152 @@
+html, body {
+  height: 100%;
+}
+body {
+  font-family: 'Oswald', sans-serif;
+  line-height: 1.0;
+  color: #404040;
+  padding: 0;
+  margin: 0;
+}
+
+main {
+  min-height: 100%;
+  background-image: url(blur.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 8px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+  font-size:48px;
+  color: #fff;
+  margin-top: 0;
+}
+h1 input[type=text] {
+  text-align: center;
+}
+
+.floating {
+  width: 600px;
+  margin: 40px auto 0 auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 16px;
+  padding: 10px;
+}
+.floating .box {
+  border: 8px solid #F4AC1E;
+  border-radius: 12px;
+  padding: 15px;
+}
+.text-right {
+  text-align: right;
+}
+.text-center {
+  text-align: center;
+}
+
+.answer-box {
+  background-image: url(answer.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border: 5px solid rgba(255, 255, 255, 0.5);
+  border-radius: 2px;
+  margin: 3px 0;
+}
+.flex-row > .flex-cell.icon {
+  padding: 0 5px;
+}
+.flex-row > .flex-cell.icon i.material-icons {
+  cursor: pointer;
+}
+.flex-row > .flex-cell.answer {
+  background-image: url(answer-value.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 15px;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 400;
+}
+
+.flex-row > .flex-cell.points {
+  border-left: 5px solid rgba(200, 215, 255, 0.5);
+  background-image: url(answer-value.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 15px;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 400;
+
+  flex: 0 0 120px;
+  -webkit-flex: 0 0 120px;
+  -moz-flex: 0 0 120px;
+}
+
+.back {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  background-color: transparent;
+  padding: 0;
+  text-align: center;
+  cursor: pointer;
+}
+.number {
+  background-image: url(answer-value.jpg);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 700;
+  padding: 15px;
+  border-radius: 100%;
+  width: 25%;
+}
+
+input[type=number],
+input[type=text] {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  background-color: transparent;
+  border: none;
+  padding: 0;
+  font-size: 40px;
+  color: #fff;
+  font-weight: 400;
+  font-family: 'Oswald', sans-serif;
+  width: 100%
+}
+
+#strikes {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+img.strike {
+  height: 90px;
+  margin: 0 2px;
+}
+
+button {
+  appearance: none;
+  -webkit-appearance: none;
+  outline: none;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 5px 10px;
+  font-family: 'Oswald', sans-serif;
+  color: #1041c5;
+  cursor: pointer;
+}
